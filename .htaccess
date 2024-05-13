@@ -1,0 +1,10 @@
+DirectoryIndex beranda.php
+
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
+
+# Handle 404 errors
+ErrorDocument 404 /404.php
